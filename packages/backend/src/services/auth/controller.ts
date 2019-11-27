@@ -27,7 +27,7 @@ export const create = (req: Request, res: Response, next: NextFunction) => {
           throw new Error('User is not defined in "Verify digital signature".');
         }
 
-        const msg = `I am signing my one-time nonce: ${user.nonce}`;
+        const msg = `İmzalanacak rastgele sayı: ${user.nonce}`;
 
         const msgBufferHex = ethUtil.bufferToHex(Buffer.from(msg, 'utf8'));
         const address = sigUtil.recoverPersonalSignature({
